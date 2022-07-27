@@ -1,0 +1,24 @@
+.post {
+    display: flex;
+    flex-direction: column;
+    width: 60vw;
+    margin: 0 auto;
+}
+@media screen and (max-width: 600px) {
+    .post {
+       width: 80vw;
+    }
+}
+.title {
+    font-size: 3.8rem;
+    color: #99685D;
+}
+.date {
+    color: #84716B;
+}
+.category {
+    font-family: monospace;
+    font-size: 1.6rem;
+    color: #84716B;
+}
+

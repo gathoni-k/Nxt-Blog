@@ -1,12 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Sans+Pro:wght@400;600&display=swap');
 html{
   font-size: 62.5%;
 }
 body {
   padding: 3rem;
   margin: 0;
-  font-size: 1.6rem;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-size: 2rem;
   background-color: #E6EDEE;
+font-family: 'Source Sans Pro', sans-serif;
+font-style: normal;
+font-weight: 400;
+/* or 21px */
+text-align: justify;
+
+/* Main Primary */
+
+color: #131616;
+
 }
 
+h1{
+  font-family: 'Playfair Display', serif;
+font-style: normal;
+font-weight: 600;
+font-size: 46px;
+
+color: #131616;
+}
+h2 {
+  font-family: 'Playfair Display', serif;
+font-weight: 600;
+font-size: 36px;
+color: #131616;
+}
+h3 {
+  font-family: 'Playfair Display', serif;
+font-weight: 600;
+font-size: 24px;
+
+/* Main Primary */
+
+color: #131616;
+}
