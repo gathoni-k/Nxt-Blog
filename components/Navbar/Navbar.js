@@ -1,13 +1,17 @@
 import styles from "./navbar.module.css"
-import { HiOutlineMenuAlt4 } from "react-icons/hi";
-import { BsSun } from "react-icons/bs";
+import { BsMoon, BsSun } from "react-icons/bs";
 import HamburgerMenu from "./Hamburger";
 import { useState } from "react";
 import Link from "next/link";
 export default function Navbar() {
     const [open, setopen] = useState(false)
+    const [theme, settheme] = useState("light")
     const handleClick = () => {
         setopen(!open);
+    }
+    const switchTheme = () => {
+        
+        settheme((theme == "dark")?"light":"dark")
     }
   return (
     <>
@@ -26,8 +30,8 @@ export default function Navbar() {
                 <a className={styles.linkitems}>Snippets</a>
                 </Link>
             </ul>
-            <ul className={styles.theme}>
-                <BsSun className={styles.themeicon}/>
+            <ul className={styles.theme} onClick={switchTheme}>
+                {theme== "light"?<BsSun className={styles.themeicon}/>:<BsMoon className={styles.themeicon}/>}
             </ul>
         </div>
         <div className={open?styles.sidenav:styles.sidenavClosed}>

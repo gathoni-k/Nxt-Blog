@@ -31,6 +31,7 @@
     background-color: #7d868825;
     list-style-type: none;
     border-radius: 5px;
+    cursor: pointer;
 }
 .theme:hover {
     background-color:  #7d868852;
