@@ -10,13 +10,15 @@
     padding: 0;
     list-style-type: none;
 }
-.menuitems li {
+.linkitems {
     margin-right: 1rem;
     padding: 1rem;
     cursor: pointer;
     border-radius: 4px;
+    text-decoration: none;
+    color: #7D8688;
 }
-.menuitems li:hover {
+.linkitems:hover {
     background-color: #7d868852;
 }
 .menuicon {
@@ -72,12 +74,14 @@
     padding: 0;
     list-style-type: none;
 }
-.sideitems li {
+.sidelinks {
     margin-right: 1rem;
     padding: 1rem;
     cursor: pointer;
     border-radius: 4px;
+    text-decoration: none;
+    color: #7D8688;
 }
-.sideitems li:hover {
+.sidelinks:hover {
     background-color: #7d868852;
 }
