@@ -1,4 +1,3 @@
-import Link from "next/link";
 import ArticleCard from "../components/ArticleCard/ArticleCard";
 import styles from "../styles/Home.module.css";
 import { getAllPosts } from "../utils/mdx";
@@ -8,9 +7,6 @@ const Home= ({ posts }) => {
     <div className={styles.container}>
 
         {posts.map((post, index) => (
-          // <li key={index}>
-          //   <Link href={`posts/${post.slug}`}>{post.frontmatter.title}</Link>
-          // </li>
           <ArticleCard title={post.frontmatter.title} link={`posts/${post.slug}`} description={post.frontmatter.description}/>
         ))}
      
