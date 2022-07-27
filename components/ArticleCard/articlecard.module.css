@@ -1,0 +1,38 @@
+.container {
+    padding: 3.2rem 2.6rem ;
+    background: #ffffff6b;
+    border-radius: 4px;
+    width: 60vw;
+    margin: 2rem auto;
+}
+@media screen and (max-width: 600px) {
+    .container {
+       width: 75vw;
+    }
+}
+ 
+.title {
+    /* color: #7D8688 ; */
+    color: #131616;
+    font-size: 2.4rem;
+    padding-bottom: 1.2rem;
+    font-family: 'Rubik';
+    font-style: normal;
+	font-weight: 600;
+}
+.description {
+    margin-bottom: 2.4rem;
+}
+.readmore {
+    border: none;
+    appearance: none;
+    cursor: pointer;
+    
+    color: #99685D; 
+    font-weight: 600; 
+    text-decoration: none;
+}
+
+.readmore:hover {
+    color: #7D8688; 
+}
