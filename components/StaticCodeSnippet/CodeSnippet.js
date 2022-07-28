@@ -11,7 +11,7 @@ const CodeSnippet =  ({ children }) => {
       theme={vsDark}
     >
       {({ className, style, tokens, getLineProps, getTokenProps }) => (
-        <div style={{width: "75vw"}}>
+        <div>
         <pre className={className} style={{ ...style, padding: "2rem", overflowX: "auto", borderRadius: "6px", 
         backgroundColor: "#1E262F" }}>
           {tokens.slice(0, -1).map((line, index) => {
