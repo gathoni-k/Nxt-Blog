@@ -1,69 +1,21 @@
 ---
 title: The design principles behind scalable web apps
 category: web
+isPublished: true
+publishedOn: June 13, 2022
 description: With web applications potentially attracting vast amounts of traffic, scalability is a fundamental concern. It’s important to ensure that web apps can expand to handle traffic influxes and maintain performance and security. 
 ---
 
-With web applications potentially attracting vast amounts of traffic, scalability is a fundamental concern. It’s important to ensure that web apps can expand to handle traffic influxes and maintain performance and security. 
-
-To scale effectively, web applications need to be designed with scaling in mind, taking steps from the ground up to ensure that they’re capable of handling the demands of scaling. Let’s take a look at how we can scale web applications and explore some best practices to consider when designing them.
-## How to scale web apps
-Scalability refers to the potential of a web application to increase its ability to handle a heavier workload. During the first stages of application development, the app might be able to handle a certain number of users. If the application wasn’t designed to scale, increasing the number of users can lead to slow performance. This might be due to the server’s CPU, RAM, and other computing resources reaching their limits. Below, we’ve outlined some of the ways we can scale web applications when they reach these limits.
-### Horizontal scaling
-Horizontal scaling describes adding more servers or nodes to infrastructure. This reduces the load on the server by distributing the workload to the added nodes. With horizontal scaling, we can keep our operations running on our current nodes as we add more. 
-### Vertical scaling
-Vertical scaling differs from horizontal scaling in that it involves adding more processing power to the existing infrastructure. With vertical scaling, we can increase the CPUs, RAM, network speed, storage, and more according to the workload. In some instances, vertical scaling can also mean replacing existing infrastructure with more powerful infrastructure. 
-### Diagonal scaling
-Diagonal scaling combines vertical and horizontal scaling. Once we’ve scaled up a server to its limits, diagonal scaling allows us to replicate the server using its current configuration to improve performance. This way, we scale out only when current servers fail to perform, making diagonal scaling a cost-effective measure.
-## Horizontal vs. vertical scaling
-Horizontal scaling is often a better approach for scaling web applications than vertical scaling. This is because it’s significantly easier to add another server than to upgrade hardware. Additionally, horizontal scaling minimizes downtime because it doesn’t require taking hardware offline for upgrades. We only need to add a node to the existing infrastructure and distribute the workload.
-
-Consider your workload and allotted budget when choosing between horizontal and vertical scaling. If a single machine can comfortably handle your workload, scaling vertically might be an efficient, reasonable choice. Additionally, consider how the cost of adding more servers to your infrastructure compares to increasing the processing power. The scaling option you choose should optimize both cost and performance.
-## Best practices for designing scalable web apps
-Now that we’ve discussed how to scale web apps, let’s take a look at how we can design them to be scalable.
-### Take an API-first approach
-An API-first approach considers APIs as discrete and modular parts of the web application. It ensures that the application’s functionality is entirely accessible through an API. The API-first approach also simplifies scaling because applications built from smaller disaggregated parts can scale efficiently by scaling only the needed parts. API gateways can then be used to provide broad functionality across different API endpoints. 
-
-The API gateway serves as the single entry point into the application. It combines multiple requests from the user and routes them to the appropriate endpoints. The gateway then consolidates the results from the multiple requests before sending them to the user, reducing the number of interactions between the user and the web app. 
-Cache as much data as is feasible 
-Web applications that are heavy on data put a constraint on performance. A common solution to this is caching. A cache temporarily stores data so that future requests for that data can be served to the client faster, eliminating the need to connect and query the database whenever the client requests something. This is especially efficient when scaling read-intensive web apps, as it reduces the query time and provides faster access to data.
-
-For example, if a client requests a user profile, the application checks the cache first for that data. If it exists, it's sent to the client. Otherwise, the database is queried.
-
-When choosing a caching strategy, it’s important to ensure that it aligns with the nature of our data. For example, if our data changes quickly, our strategy must be consistent with the updates in the database. We should use a content delivery network (CDN) for static assets like HTML and images. A CDN is a distribution of servers located in different locations that work together to serve content faster. It reduces the strain on the database by serving the assets from the server nearest to the client. 
-Adopt multi-tier software architecture
-In a multi-tier software architecture, the web application is divided into several tiers. Examples of these tiers include the web server, application server, and database server. Each of these tiers runs separately on different servers and hardware, making it easy to scale applications. 
-
-With multi-tier software, we can change the hardware or server configuration of each tier without affecting the other tiers in terms of performance. This is a cost-effective option because we only make the changes to the affected tier. If our architecture were single-tiered, we'd need to overhaul the whole application to meet our scaling goals.
-Opt for microservices over monoliths
-A monolithic application is tightly coupled and contains a huge code base that can get quite complex. Because of this, we can't scale single components as needed without impacting the whole application. Additionally, trying to scale a monolithic application can be quite costly. Scaling horizontally would require duplicating the entire application—even when scaling select features in the application is enough. This means using more computing power than necessary. 
-
-Using a microservices architecture allows us to scale only the necessary components. The application’s codebase is split into independent modules in a microservices architecture. Microservices simplify scaling, as each module can be scaled independently to match the workload requirements.
-### Continuously observe key metrics
-As a preventative measure, it’s important to continuously observe scalability metrics like CPU and memory use, network throughput, and latency.
- 
-Observing CPU use levels helps maintain an optimal workload and processing power balance. When we observe these metrics, we know when to increase the number of CPUs to match the workload rate. Furthermore, by using an observability tool, we can set a target CPU utilization level that, when reached, triggers an autoscaler to increase the CPU instances.
-
-Monitoring uptime is also important since the higher the uptime, the better the user experience. We can use a logging tool to determine when the app fails, as a lack of data logs indicate delays. Then, we can use that information as an indicator to scale the application.
-Use the right type of database
-Database scaling is a database’s ability to expand to meet the data requirements of an application. The type of database you choose, whether relational or non-relational, might affect the way you scale.
-
-For instance, when working with SQL-based databases, the performance might degrade as the workload increases. One of the reasons for this is that SQL joins have poor time complexity. When performing a JOIN operation, the database is essentially executing two queries and comparing the results from each to determine what values to return. 
-
-As the app’s data needs keep increasing, we might notice an increase in CPU usage and delays, indicating that we need to scale. However, scaling relational databases can be difficult — especially when we’re trying to perform horizontal scaling. While we can increase the processing power of the database server, we’ll still need to scale out horizontally when we reach the server’s limit. This is where the challenge lies.
-
-Horizontal scaling involves adding another machine to the infrastructure. But it’s difficult to split the tables stored in relational databases. And even if we split them, the additional JOIN requests when retrieving data from different machines will negatively impact the scaling efforts.
-
-With NoSQL databases, horizontal scaling is less complex. Since NoSQL databases require us to store our data and decide how it will be accessed, pieces of the database can be distributed across different nodes. All the computation for queries of data stored in a node is performed in that node. Thanks to this, the overall processing capacity of the database is increased.
-Leverage CI/CD
-We’ve seen how using microservices can contribute to our scaling efforts. Nevertheless, it’s important to leverage continuous integration/continuous deployment (CI/CD) tools to reap the full benefits of microservice architecture. CI/CD stresses the importance of automated tests in each stage of development. This increases the time between development and production by allowing continuous code delivery.
-
-With CI/CD, we can create and iterate faster and scale our applications quickly. However, we need to ensure our CI/CD strategy won’t cause bottlenecks as the application continues to scale. For example, if multiple developers are working on different microservices trying to test a release simultaneously, our workflow will likely be delayed. As a result, these developers end up having to wait on each other, stalling operations. 
-
-To build scalable web apps, it’s critical to ensure the CI/CD pipeline being used is scalable. This can be achieved by having CI/CD servers in different environments so that developers can work on different releases simultaneously.
-## Conclusion
-As you can see, there are many ways to scale web applications. Depending on your application's needs, you might choose to scale vertically or horizontally. If a single machine can handle the processing needs of your app, you might want to scale vertically. However, keep in mind that you can only scale up as far as your server allows, and it may reach a point where you'll have to scale horizontally.
-
-It’s best to design your web application in a scalable manner. Opt to disintegrate the application in parts that can be scaled independently, and always develop your applications with scalability and future growth in mind. We recommend choosing a NoSQL database, using microservices, and following a multi-tier architecture to set your application up for future scaling success.
-
-To learn more about building applications and features that perform at scale, read about how we scaled a new Mattermost feature, Collapsed Reply Threads.
+```css
+.post {
+    display: flex;
+    flex-direction: column;
+    width: 70vw;
+    margin: 0 auto;
+}
+@media screen and (max-width: 650px) {
+    .post {
+       width: 80vw;
+    }
+}
+```

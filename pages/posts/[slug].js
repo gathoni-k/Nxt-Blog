@@ -2,8 +2,10 @@ import { getMDXComponent } from "mdx-bundler/client";
 import { getAllPosts, getSinglePost } from "../../utils/mdx";
 import styles from "../../styles/Home.module.css";
 import Navbar from "../../components/Navbar/Navbar"
+import CodeSnippet from "../../components/StaticCodeSnippet/CodeSnippet";
+import { useMemo } from "react";
 const Post = ({ code, frontmatter }) => {
-  const Component = React.useMemo(() => getMDXComponent(code), [code]);
+  const Component = useMemo(() => getMDXComponent(code), [code]);
 
   return (
     <div className={styles.container}>
@@ -12,7 +14,9 @@ const Post = ({ code, frontmatter }) => {
           <h1 className={styles.title}>{frontmatter.title}</h1>
           <span className={styles.date}>Mary Gathoni / June 13, 2022</span>
           <p className={styles.category}>[{frontmatter.category}]</p>
-          <Component />
+          <Component components={{
+    pre: CodeSnippet,
+  }} />
       </div>
     
     </div>

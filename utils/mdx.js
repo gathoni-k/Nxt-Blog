@@ -33,7 +33,17 @@ const getCompiledMDX = async (content) => {
   const rehypePlugins = [];
 
   try {
-return await bundleMDX({source: content});
+    return await bundleMDX({source: content, xdmOptions(options) {
+      options.remarkPlugins = [
+        ...(options.remarkPlugins ?? []),
+        ...remarkPlugins,
+      ];
+      options.rehypePlugins = [
+        ...(options.rehypePlugins ?? []),
+        ...rehypePlugins,
+      ];
+      return options;
+    }});
   } catch (error) {
     throw new Error(error);
   }

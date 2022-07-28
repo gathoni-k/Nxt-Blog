@@ -1,17 +1,17 @@
 .post {
     display: flex;
     flex-direction: column;
-    width: 60vw;
+    width: 70vw;
     margin: 0 auto;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 650px) {
     .post {
        width: 80vw;
     }
 }
 .title {
     font-size: 3.8rem;
-    color: #99685D;
+    color: #131616;
 }
 .date {
     color: #84716B;
