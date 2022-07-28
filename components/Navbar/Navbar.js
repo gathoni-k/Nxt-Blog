@@ -1,18 +1,15 @@
 import styles from "./navbar.module.css"
 import { BsMoon, BsSun } from "react-icons/bs";
 import HamburgerMenu from "./Hamburger";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import ActiveLink from "../ActiveLink/ActiveLink";
+import ThemeToggler from "../ThemeToggler/ThemeToggler";
 export default function Navbar() {
     const [open, setopen] = useState(false)
-    const [theme, settheme] = useState("light")
+    
     const handleClick = () => {
         setopen(!open);
-    }
-    const switchTheme = () => {
-        
-        settheme((theme == "dark")?"light":"dark")
     }
   return (
     <>
@@ -31,9 +28,7 @@ export default function Navbar() {
                 <a className={styles.sidelinks}>Snippets</a>
                 </ActiveLink>
             </ul>
-            <ul className={styles.theme} onClick={switchTheme}>
-                {theme== "light"?<BsSun className={styles.themeicon}/>:<BsMoon className={styles.themeicon}/>}
-            </ul>
+            <ThemeToggler/>
         </div>
         <div className={open?styles.sidenav:styles.sidenavClosed}>
         <ul className={styles.sideitems}>

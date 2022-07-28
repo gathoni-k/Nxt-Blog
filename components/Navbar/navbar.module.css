@@ -88,5 +88,5 @@
 }
 
 .active {
-    border-bottom: 1px solid #7D8688;
+    border-bottom: 1px solid var(--color-text-secondary);
 }

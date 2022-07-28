@@ -11,14 +11,14 @@
 }
 .title {
     font-size: 3.8rem;
-    color: #131616;
+    color: var(--color-text-primary);
 }
 .date {
-    color: #84716B;
+    color: var(--color-text-secondary);
 }
 .category {
     font-family: monospace;
     font-size: 1.6rem;
-    color: #84716B;
+    color: var(--color-text-secondary);
 }
 

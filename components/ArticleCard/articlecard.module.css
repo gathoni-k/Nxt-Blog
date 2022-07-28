@@ -1,6 +1,6 @@
 .container {
     padding: 3.2rem 2.6rem ;
-    background: #ffffff6b;
+    background: var(--color-bg-secondary);
     border-radius: 4px;
     width: 60vw;
     margin: 2rem auto;
@@ -13,15 +13,12 @@
  
 .title {
     /* color: #7D8688 ; */
-    color: #131616;
+    color: var(--color-text-primary);
     font-size: 2.4rem;
     font-family: 'Rubik';
     font-style: normal;
 	font-weight: 600;
     text-decoration: none;
-}
-.title:hover {
-    color: #99685D;
 }
 .description {
     margin-top: 1.2rem;
@@ -31,12 +28,12 @@
     border: none;
     appearance: none;
     cursor: pointer;
-    
-    color: #99685D; 
-    font-weight: 600; 
+    font-size: 1.4rem;
+    color: var(--color-text-special-primary); 
+    font-weight: 400; 
     text-decoration: none;
 }
 
 .readmore:hover {
-    color: #7D8688; 
+    color: var(--color-text-secondary); 
 }
