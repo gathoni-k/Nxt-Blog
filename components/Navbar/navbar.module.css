@@ -86,3 +86,7 @@
 .sidelinks:hover {
     background-color: #7d868852;
 }
+
+.active {
+    border-bottom: 1px solid #7D8688;
+}
