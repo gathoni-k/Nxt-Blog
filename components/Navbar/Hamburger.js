@@ -21,13 +21,14 @@ export default function HamburgerMenu(props) {
       width,
       height,
       position: "relative",
-      transform: `rotate(${props.rotate || 0}deg)`
+      transform: `rotate(${props.rotate || 0}deg)`,
+      
     },
     lineBase: {
       display: "block",
       height: `${strokeWidth}px`,
       width: "100%",
-      background: props.color || "#000",
+      background: "var(--color-text-primary)",
       transitionTimingFunction: "ease",
       transitionDuration: `${animationDuration}s`,
       borderRadius: `${props.borderRadius || 0}px`,
