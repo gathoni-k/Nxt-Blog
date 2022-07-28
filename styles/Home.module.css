@@ -13,12 +13,22 @@
     font-size: 3.8rem;
     color: var(--color-text-primary);
 }
+.description {
+    font-size: 1.8rem;
+    color: var(--color-text-special-primary);
+}
 .date {
-    color: var(--color-text-secondary);
+    color: var(--color-text-primary);
+    font-size: 1.2rem;
+
+    opacity: .8;
 }
 .category {
     font-family: monospace;
     font-size: 1.6rem;
     color: var(--color-text-secondary);
+    padding-bottom: 1.2rem;
+    border-bottom: 1px solid var(--color-text-special-primary);
+
 }
 

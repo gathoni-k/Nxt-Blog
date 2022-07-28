@@ -12,7 +12,8 @@ const Post = ({ code, frontmatter }) => {
       <Navbar/>
       <div className={styles.post}>
           <h1 className={styles.title}>{frontmatter.title}</h1>
-          <span className={styles.date}>Mary Gathoni / June 13, 2022</span>
+          <p className={styles.description}>{frontmatter.description}</p>
+          <span className={styles.date}>Published{" "} {frontmatter.publishedOn} by {frontmatter.author}</span>
           <p className={styles.category}>[{frontmatter.category}]</p>
           <Component components={{
     pre: CodeSnippet,
