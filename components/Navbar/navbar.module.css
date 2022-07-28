@@ -58,7 +58,7 @@
 
 .sidenav {
     position: relative;
-    background-color: #E6EDEE;
+    background-color: var(--color-bg-primary);
     max-height: 30vh;
     transition: max-height 0.4s ease-in;
     width: 90vw;

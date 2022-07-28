@@ -19,6 +19,20 @@ export default function Navbar() {
             </div>
             <ul className={styles.menuitems}>
             <ActiveLink activeClassName={styles.active} href="/" passHref>
+                <a className={styles.linkitems}>Home</a>
+            </ActiveLink>
+                <ActiveLink activeClassName={styles.active} href="/posts" passHref>
+                <a className={styles.linkitems}>Posts</a>
+                </ActiveLink>
+                <ActiveLink activeClassName={styles.active} href="/snippets" passHref>
+                <a className={styles.linkitems}>Snippets</a>
+                </ActiveLink>
+            </ul>
+            <ThemeToggler/>
+        </div>
+        <div className={open?styles.sidenav:styles.sidenavClosed}>
+        <ul className={styles.sideitems}>
+            <ActiveLink activeClassName={styles.active} href="/" passHref>
                 <a className={styles.sidelinks}>Home</a>
             </ActiveLink>
                 <ActiveLink activeClassName={styles.active} href="/posts" passHref>
@@ -27,20 +41,6 @@ export default function Navbar() {
                 <ActiveLink activeClassName={styles.active} href="/snippets" passHref>
                 <a className={styles.sidelinks}>Snippets</a>
                 </ActiveLink>
-            </ul>
-            <ThemeToggler/>
-        </div>
-        <div className={open?styles.sidenav:styles.sidenavClosed}>
-        <ul className={styles.sideitems}>
-                <Link href="/" passHref>
-                    <a className={styles.sidelinks}>Home</a>
-                </Link>
-                <Link href="/" passHref>
-                    <a className={styles.sidelinks}>Posts</a>
-                </Link>
-                <Link href="/" passHref>
-                    <a className={styles.sidelinks}>Snippets</a>
-                </Link>
             </ul>
         
         </div>
