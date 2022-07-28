@@ -4,23 +4,33 @@
     width: 70vw;
     margin: 0 auto;
 }
+
 @media screen and (max-width: 650px) {
     .post {
        width: 80vw;
     }
 }
+@media screen and (max-width: 400px) {
+    .post {
+        width: 80vw;
+     }
+}
 .title {
-    font-size: 3.8rem;
+    font-size: 3.2rem;
     color: var(--color-text-primary);
 }
 .description {
     font-size: 1.8rem;
     color: var(--color-text-special-primary);
 }
+@media screen and (max-width: 400px) {
+    .description {
+       font-size: 1.6rem;
+    }
+}
 .date {
     color: var(--color-text-primary);
     font-size: 1.2rem;
-
     opacity: .8;
 }
 .category {

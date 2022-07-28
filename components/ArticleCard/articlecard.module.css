@@ -10,7 +10,13 @@
        width: 75vw;
     }
 }
- 
+@media screen and (max-width: 400px) {
+    .container {
+       width: 80vw;
+       padding: 1.6rem;
+
+    }
+}
 .title {
     /* color: #7D8688 ; */
     color: var(--color-text-primary);

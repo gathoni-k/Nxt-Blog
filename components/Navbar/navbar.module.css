@@ -11,12 +11,17 @@
     list-style-type: none;
 }
 .linkitems {
-    margin-right: 1rem;
-    padding: 1rem;
+    margin-right: 0.5rem;
+    padding: 2rem;
     cursor: pointer;
     border-radius: 4px;
     text-decoration: none;
     color: #7D8688;
+}
+@media screen and (max-width: 400px) {
+    .linkitems { 
+        padding: 0rem;
+    }
 }
 .linkitems:hover {
     background-color: #7d868852;
