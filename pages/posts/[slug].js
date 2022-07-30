@@ -25,14 +25,14 @@ const Post = ({ code, frontmatter }) => {
 };
 
 export const getStaticProps = async ({ params }) => {
-  const post = await getSinglePost(params.slug);
+  const post = await getSinglePost(params.slug, "snippets");
   return {
     props: { ...post },
   };
 };
 
 export const getStaticPaths = async () => {
-  const paths = getAllPosts().map(({ slug }) => ({ params: { slug } }));
+  const paths = getAllPosts("posts").map(({ slug }) => ({ params: { slug } }));
   return {
     paths,
     fallback: false,
