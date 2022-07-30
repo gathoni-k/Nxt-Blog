@@ -25,21 +25,21 @@ body {
 body[data-theme="light"] {
   --color-text-primary: #131616;
   --color-text-secondary: #ff6b00;
-  --color-text-special-primary: #7D8688;
+  --color-text-special-primary: #b1b1b1;
   --color-bg-primary: #E6EDEE;
   --color-bg-secondary: #7d86881c;
 }
 
 body[data-theme="dark"] {
   --color-text-primary: #F2F5F7;
-  --color-text-special-primary: #7D8688;
+  --color-text-special-primary: #b1b1b1;
   --color-text-secondary: #ff6b00;
   --color-bg-primary: #0E141B;
   --color-bg-secondary: #1E262F;
 }
 
-p {
+/* p {
   line-height: 2.2;
   font-size: 1.6rem;
   font-family: 'Roboto Slab', serif;
-}
+} */
