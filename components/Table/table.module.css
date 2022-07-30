@@ -1,0 +1,33 @@
+.table {
+    width: 70vw;
+    margin: 0 auto;
+    border-collapse: collapse; 
+}
+
+@media screen and (max-width: 650px) {
+    .table {
+       width: 80vw;
+    }
+}
+.tableheaditem{
+    padding: 2rem;
+    color: var(--color-text-special-primary);
+}
+.tablehead {
+    border-bottom: 2px solid var(--color-text-special-primary);
+}
+.tablerow:hover{
+    background-color: var(--color-bg-secondary);
+}
+.tablerowitem {
+    padding: 2rem;
+}
+.tablerowitem:first-child{
+    cursor: pointer;
+    
+}
+.snippetlink {
+    text-decoration: none;
+    color: var(--color-text-secondary);
+
+}
