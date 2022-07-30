@@ -1,0 +1,13 @@
+.featured {
+    margin-top: 3rem;
+}
+.subheading {
+    color: var(--color-text-special-primary);
+    font-size: 1.6rem;
+    
+}
+.heading {
+    color: var(--color-text-primary);
+    font-size: 1.8em;
+    font-weight: 400;
+}

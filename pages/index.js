@@ -1,26 +1,41 @@
-import ArticleCard from "../components/ArticleCard/ArticleCard";
+import Contact from "../components/Contact/Contact";
+import FeaturedProjects from "../components/FeaturedProjects/FeaturedProjects";
 import Navbar from "../components/Navbar/Navbar";
 import styles from "../styles/Home.module.css";
-import { getAllPosts } from "../utils/mdx";
 
-const Home= ({ posts }) => {
+const Home= () => {
   return (
     <div className={styles.container}>
       <Navbar/>
-        {posts.map((post, index) => (
-          <ArticleCard key={index} title={post.frontmatter.title} link={`posts/${post.slug}`} description={post.frontmatter.description}/>
-        ))}
+      <header>
+        <h1 className={styles.header}>I build things with code</h1>
+      </header>
+      <main>
+        <article className={styles.introduction}>
+          <p>
+            Hey, I&apos;m Gathoni, a software developer and technical writer passionate about creating solutions using code.
+          </p>
+          <p>Some of the technologies I have worked with are:</p>
+          <div className={styles.uvplist}>
+          <ul>
+            <li>JavaScript(ES6+)</li>
+            <li>React</li>
+            <li>Node.js</li>
+            <li>MongoDB</li>
+          </ul>
+          </div>
+          <p>
+            I am currently creating this blog and documenting the process here.
+          </p>
+        </article>
+        <article>
+          <Contact/>
+          <FeaturedProjects/>
+        </article>
+      </main>
      
     </div>
   );
-};
-
-export const getStaticProps = async () => {
-  const posts = getAllPosts("posts");
-
-  return {
-    props: { posts },
-  };
 };
 
 export default Home;

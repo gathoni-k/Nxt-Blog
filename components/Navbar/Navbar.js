@@ -18,14 +18,14 @@ export default function Navbar() {
                 <HamburgerMenu  isOpen={open} menuClicked={handleClick} width={14} height={8} strokeWidth={1.3} />
             </div>
             <ul className={styles.menuitems}>
-            <ActiveLink activeClassName={styles.active} href="/" passHref>
-                <a className={styles.linkitems}>Home</a>
-            </ActiveLink>
+                <ActiveLink activeClassName={styles.active} href="/" passHref>
+                    <a className={styles.linkitems}>Home</a>
+                </ActiveLink>
                 <ActiveLink activeClassName={styles.active} href="/posts" passHref>
-                <a className={styles.linkitems}>Posts</a>
+                    <a className={styles.linkitems}>Posts</a>
                 </ActiveLink>
                 <ActiveLink activeClassName={styles.active} href="/snippets" passHref>
-                <a className={styles.linkitems}>Snippets</a>
+                    <a className={styles.linkitems}>Snippets</a>
                 </ActiveLink>
             </ul>
             <ThemeToggler/>

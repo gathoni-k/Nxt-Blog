@@ -1,0 +1,25 @@
+.contact {
+    display: flex;
+    align-items: center;
+    margin: 3rem 0 3rem 0;
+}
+.contacticon {
+    text-decoration: none;
+    color: var(--color-text-primary);
+    margin-right: 2rem;
+    font-size: 2rem;
+}
+.contacttext {
+    font-size: 1.5rem;
+    color: var(--color-text-primary);
+    text-decoration: none;
+    padding: 1rem 1.2rem;
+    background-color: var(--color-bg-secondary);
+    border-radius: 1rem;
+    margin-left: 5rem;
+}
+.line {
+    height: 1px;
+    background-color: var(--color-text-special-primary);
+    border: none;
+}

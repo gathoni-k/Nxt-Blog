@@ -12,7 +12,7 @@
 }
 .linkitems {
     margin-right: 0.5rem;
-    padding: 2rem;
+    padding: 0.6rem 1rem;
     cursor: pointer;
     border-radius: 4px;
     text-decoration: none;
@@ -24,7 +24,7 @@
     }
 }
 .linkitems:hover {
-    background-color: #7d868852;
+    background-color: var(--color-bg-secondary);
 }
 .menuicon {
     padding: 1rem;
