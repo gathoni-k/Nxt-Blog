@@ -4,10 +4,14 @@ import matter from "gray-matter";
 import { bundleMDX } from "mdx-bundler";
 
 export const ROOT = process.cwd();
-export const POSTS_PATH = path.join(process.cwd(), "content/posts");
 
-export const getFileContent = (filename) => {
-  return fs.readFileSync(path.join(POSTS_PATH, filename), "utf8");
+export const getPath = (folder) => {
+    return path.join(process.cwd(), `content/${folder}`);
+}
+
+export const getFileContent = (filename, folder) => {
+    const POSTS_PATH = getPath(folder)
+    return fs.readFileSync(path.join(POSTS_PATH, filename), "utf8");
 };
 
 // Compiles mdx source to html
@@ -49,8 +53,8 @@ const getCompiledMDX = async (content) => {
   }
 };
 
-export const getSinglePost = async (slug) => {
-  const source = getFileContent(`${slug}.mdx`);
+export const getSinglePost = async (slug, folder) => {
+  const source = getFileContent(`${slug}.mdx`, folder);
   const { code, frontmatter } = await getCompiledMDX(source);
   return {
     frontmatter,
@@ -58,12 +62,13 @@ export const getSinglePost = async (slug) => {
   };
 };
 
-export const getAllPosts = () => {
+export const getAllPosts = (folder) => {
+    const POSTS_PATH = getPath(folder)
   return fs
     .readdirSync(POSTS_PATH)
     .filter((path) => /\.mdx?$/.test(path))
     .map((fileName) => {
-      const source = getFileContent(fileName);
+      const source = getFileContent(fileName, folder);
       const slug = fileName.replace(/\.mdx?$/, "");
       const { data } = matter(source);
       return {
