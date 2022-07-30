@@ -4,7 +4,7 @@ import { BsMoon, BsSun } from "react-icons/bs";
 import styles from "../Navbar/navbar.module.css"
 
 export default function ThemeToggler() {
-      const [theme, settheme] = useState(null)
+      const [theme, settheme] = useState("light")
       const handleToggle = () => {
         const newTheme = theme ==="light"?"dark":"light"
         settheme(newTheme)
@@ -28,12 +28,12 @@ export default function ThemeToggler() {
     useEffect(() => {
         const userSetPreference = getUserSetPreference();
         const mediaQueryPreference = getMediaQueryPreference();
-
         if(userSetPreference) {
             settheme(userSetPreference)
         } else {
             settheme(mediaQueryPreference)
         }
+        document.body.dataset.theme = theme
 
     }, [theme])
     
@@ -41,7 +41,7 @@ export default function ThemeToggler() {
   return (
     <>
         <ul className={styles.theme} onClick={handleToggle}>
-            {theme=== "light"?<BsSun className={styles.themeicon}/>:<BsMoon className={styles.themeicon}/>}
+            {theme=== "light"?<BsMoon className={styles.themeicon}/>:<BsSun className={styles.themeicon}/>}
         </ul>
     </>
   )
