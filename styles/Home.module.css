@@ -35,7 +35,7 @@
     margin: 0 auto;
 }
 .header {
-    color: var(--color-bg-secondary);
+    color: var(--color-text-primary);
     font-size: 3.8rem;
     
 }

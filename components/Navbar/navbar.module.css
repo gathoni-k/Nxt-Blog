@@ -16,7 +16,7 @@
     cursor: pointer;
     border-radius: 4px;
     text-decoration: none;
-    color: #7D8688;
+    color: var(--color-text-primary);
 }
 @media screen and (max-width: 400px) {
     .linkitems { 
