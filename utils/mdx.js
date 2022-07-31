@@ -77,3 +77,10 @@ export const getAllPosts = (folder) => {
       };
     });
 };
+export const getAllPublished = (folder) => {
+  const posts = getAllPosts(folder)
+  const published = posts.filter((post) => {
+    return post.frontmatter.isPublished === true
+  })
+  return published
+}
