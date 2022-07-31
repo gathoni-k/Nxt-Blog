@@ -26,6 +26,9 @@
 	font-weight: 600;
     text-decoration: none;
 }
+.title:hover {
+    color: var(--color-text-secondary);
+}
 .description {
     margin-top: 1.2rem;
     margin-bottom: 2.4rem;
@@ -35,7 +38,7 @@
     appearance: none;
     cursor: pointer;
     font-size: 1.4rem;
-    color: var(--color-text-special-primary); 
+    color: var(--color-text-primary); 
     font-weight: 400; 
     text-decoration: none;
 }
