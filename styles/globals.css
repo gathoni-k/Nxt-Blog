@@ -8,7 +8,8 @@ body {
   --color-bg-primary: #E6EDEE;
   --color-bg-secondary: #7d86881c;
   padding: 3rem;
-  margin: 0;
+  width: 80vw;
+  margin: 0 auto;
   font-size: 1.6rem;
   font-family: 'Source Sans Pro', sans-serif;
   background: var(--color-bg-primary);
@@ -16,12 +17,7 @@ body {
   font-family: sans-serif;
   transition: background 0.25s ease-in-out;
 }
-@media screen and (max-width: 400px) {
-  body {
-     padding: 2rem;
 
-  }
-}
 body[data-theme="light"] {
   --color-text-primary: #131616;
   --color-text-secondary: #ff6b00;

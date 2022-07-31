@@ -1,20 +1,9 @@
 .post {
     display: flex;
     flex-direction: column;
-    width: 70vw;
-    margin: 0 auto;
+    width: 100%;
 }
 
-@media screen and (max-width: 650px) {
-    .post {
-       width: 80vw;
-    }
-}
-@media screen and (max-width: 400px) {
-    .post {
-        width: 80vw;
-     }
-}
 .title {
     font-size: 3.2rem;
     color: var(--color-text-primary);
@@ -42,17 +31,20 @@
 
 }
 .container {
-    width: 70vw;
+    width: 100%;
     margin: 0 auto;
 }
 .header {
-    color: var(--color-text-primary);
+    color: var(--color-bg-secondary);
     font-size: 3.8rem;
     
 }
 .introduction {
     font-weight: 300;
     color: var(--color-text-primary);
+    line-height: 2.4rem;
+    font-size: 1.6rem;
+
 }
 .uvplist ul {
     list-style-type: square;

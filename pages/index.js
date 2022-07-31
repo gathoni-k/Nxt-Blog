@@ -8,12 +8,12 @@ const Home= () => {
     <div className={styles.container}>
       <Navbar/>
       <header>
-        <h1 className={styles.header}>I build things with code</h1>
+        <h1 className={styles.header}>I build things with code.</h1>
       </header>
       <main>
         <article className={styles.introduction}>
           <p>
-            Hey, I&apos;m Gathoni, a software developer and technical writer passionate about creating solutions using code.
+            Hey, I&apos;m Gathoni, a software developer and technical writer focused on solving business problems with code.
           </p>
           <p>Some of the technologies I have worked with are:</p>
           <div className={styles.uvplist}>
