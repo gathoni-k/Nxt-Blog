@@ -25,7 +25,7 @@ const Post = ({ code, frontmatter }) => {
 };
 
 export const getStaticProps = async ({ params }) => {
-  const post = await getSinglePost(params.slug, "snippets");
+  const post = await getSinglePost(params.slug, "posts");
   return {
     props: { ...post },
   };
