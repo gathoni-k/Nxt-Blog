@@ -3,12 +3,13 @@ html{
   font-size: 62.5%;
 }
 body {
-  --color-text-primary: #131616;
+  --color-text-primary: #F2F5F7;
+  --color-text-special-primary: #b1b1b1;
   --color-text-secondary: #ff6b00;
-  --color-bg-primary: #E6EDEE;
-  --color-bg-secondary: #7d86881c;
+  --color-bg-primary: #0E141B;
+  --color-bg-special-secondary: #b1b1b1;
+  --color-bg-secondary: #1E262F;
   padding: 3rem;
-  width: 80vw;
   margin: 0 auto;
   font-size: 1.6rem;
   font-family: 'Source Sans Pro', sans-serif;
@@ -20,8 +21,9 @@ body {
 
 body[data-theme="light"] {
   --color-text-primary: #131616;
-  --color-text-secondary: #ff6b00;
-  --color-text-special-primary: #b1b1b1;
+  --color-text-secondary: #6C757D;
+  --color-text-accent: #a30923;
+  --color-text-special-primary: #b1b1b148;
   --color-bg-primary: #E6EDEE;
   --color-bg-secondary: #7d86881c;
   --color-bg-special-secondary: #28292ac7;
@@ -30,8 +32,9 @@ body[data-theme="light"] {
 
 body[data-theme="dark"] {
   --color-text-primary: #F2F5F7;
-  --color-text-special-primary: #b1b1b1;
-  --color-text-secondary: #ff6b00;
+  --color-text-special-primary: #b1b1b137;
+  --color-text-accent: #EA0027;
+  --color-text-secondary: #6C757D;
   --color-bg-primary: #0E141B;
   --color-bg-special-secondary: #b1b1b1;
   --color-bg-secondary: #1E262F;

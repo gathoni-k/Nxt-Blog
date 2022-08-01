@@ -3,19 +3,17 @@ import Navbar from "../components/Navbar/Navbar";
 import styles from "../styles/Home.module.css";
 import { getAllPublished } from "../utils/mdx";
 
-const Posts= ({ posts }) => {
+const Articles= ({ posts }) => {
   const published = posts.filter((post) => {
     return post.frontmatter.isPublished === true
   })
   return (
     <div className={styles.container}>
       <Navbar/>
-      <div className={styles.postscontainer}>
-      {published.map((post, index) => (
+      <div></div>
+        {published.map((post, index) => (
           <ArticleCard key={index} title={post.frontmatter.title} link={`posts/${post.slug}`} description={post.frontmatter.description}/>
         ))}
-      </div>
-        
      
     </div>
   );
@@ -28,4 +26,4 @@ export const getStaticProps = async () => {
   };
 };
 
-export default Posts;
+export default Articles;

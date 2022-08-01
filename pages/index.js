@@ -10,7 +10,7 @@ const Home= () => {
       <header>
         <h1 className={styles.header}>I build things with code.</h1>
       </header>
-      <main>
+      <main className={styles.main}>
         <article className={styles.introduction}>
           <p>
             Hey, I&apos;m Gathoni, a software developer and technical writer focused on solving business problems with code.

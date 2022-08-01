@@ -24,6 +24,6 @@
 }
 .snippetlink {
     text-decoration: none;
-    color: var(--color-text-secondary);
+    color: var(--color-text-accent);
 
 }

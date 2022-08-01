@@ -93,5 +93,5 @@
 }
 
 .active {
-    border-bottom: 1px solid var(--color-text-secondary);
+    border-bottom: 1px solid var(--color-text-accent);
 }
