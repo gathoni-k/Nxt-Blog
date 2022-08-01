@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import HamburgerMenu from '../Navbar/Hamburger'
 import { BsMoon, BsSun } from "react-icons/bs";
 import styles from "../Navbar/navbar.module.css"
 
@@ -36,8 +35,6 @@ export default function ThemeToggler() {
         document.body.dataset.theme = theme
 
     }, [theme])
-    
-    
   return (
     <>
         <ul className={styles.theme} onClick={handleToggle}>
